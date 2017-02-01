@@ -15,6 +15,7 @@ template {
     destination = "/trigger"
     command = "/usr/bin/consul lock -verbose -http-addr=${BACKSTAB_CONSUL_ADDRESS} ${BACKSTAB_CONSUL_LOCK} /usr/bin/backstab-action.sh"
     command_timeout = "${BACKSTAB_TIMEOUT}"
+    wait = "${BACKSTAB_TIMEOUT}"
 }
 EOF
 
