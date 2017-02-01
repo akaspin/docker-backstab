@@ -23,7 +23,7 @@ based on is host local IPv4.
 reacts to template result changes. On start `docker-backstab` renders trigger 
 template and then runs watch routine.
 
-`BACKSTAB_INITIAL_DELAY` (30) Time to sleep before start watch routine.
+`BACKSTAB_WINDOW` (60s:120s) Wait window
 
 `BACKSTAB_TIMEOUT` (10m) Restart command timeout.
 

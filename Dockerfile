@@ -16,7 +16,6 @@ ENV BACKSTAB_CONSUL_LOCK backstab
 
 # Base64-encoded trigger consul template and initial delay
 ENV BACKSTAB_TRIGGER 'Cg=='
-ENV BACKSTAB_INITIAL_DELAY 30
 ENV BACKSTAB_TIMEOUT 10m
 ENV BACKSTAB_WINDOW 60s:120s
 
