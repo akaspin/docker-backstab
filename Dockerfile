@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-glibc:alpine-3.5
 
 RUN apk --no-cache add --virtual .buildpack curl libarchive-tools  && \
-    curl -sSL https://releases.hashicorp.com/consul-template/0.18.0/consul-template_0.18.0_linux_amd64.zip | bsdtar -C /usr/bin/ -xvf- && \
+    curl -sSL https://releases.hashicorp.com/consul-template/0.18.1/consul-template_0.18.1_linux_amd64.zip | bsdtar -C /usr/bin/ -xvf- && \
     chmod +x /usr/bin/consul-template && \
     curl -sSL https://releases.hashicorp.com/consul/0.7.4/consul_0.7.4_linux_amd64.zip | bsdtar -C /usr/bin/ -xvf- && \
     chmod +x /usr/bin/consul && \
@@ -11,7 +11,7 @@ RUN apk --no-cache add --virtual .buildpack curl libarchive-tools  && \
     apk del .buildpack
 
 # Consul address and lock name
-ENV BACKSTAB_CONSUL_ADDRESS 127.0.0.1:8500
+ENV CONSUL_HTTP_ADDR 127.0.0.1:8500
 ENV BACKSTAB_CONSUL_LOCK backstab
 
 # Base64-encoded trigger consul template
